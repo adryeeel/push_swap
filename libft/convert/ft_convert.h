@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 22:11:30 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/04/16 14:16:36 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/04/26 15:34:55 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 int		*ft_ctob(char c);
 char	*ft_itoa(long n);
 int		ft_atoi(const char *nptr);
+long	ft_atol(const char *nptr);
 char	*ft_xtoa(unsigned long num);
 size_t	ft_nbrlen(long nbr, int base);
 
