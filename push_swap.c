@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 00:58:17 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/04/26 02:42:46 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/04/26 17:22:52 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 int main(int argc, char const *argv[])
 {
+	if (argc < 2)
+		return (EXIT_FAILURE);
+	
 	if (!ft_check_args(++argv, --argc))
 		return (EXIT_FAILURE);
 
