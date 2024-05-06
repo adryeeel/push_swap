@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 01:07:13 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/07 00:10:53 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/07 00:31:50 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,7 @@ void ft_sb(int *stack_b, size_t size_b);
 void ft_ss(int *stack_a, int *stack_b, int sa_size, int sb_size);
 
 bool ft_swap_stack(int *stack, size_t size);
+void ft_pop_stack(int **stack, size_t *size);
+void ft_push_stack(int **stack, int new_value, size_t *size);
 
 #endif
