@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_push_stack.c                                    :+:      :+:    :+:   */
+/*   ft_stack_push.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 23:38:34 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/07 00:33:31 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/07 00:42:52 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void ft_push_stack(int **stack, int new_value, size_t *size)
+void ft_stack_push(int **stack, int new_value, size_t *size)
 {
 	int *new_stack;
 
