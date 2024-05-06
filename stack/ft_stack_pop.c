@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pop_stack.c                                     :+:      :+:    :+:   */
+/*   ft_stack_pop.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 00:17:28 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/07 00:26:26 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/07 00:42:36 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void ft_pop_stack(int **stack, size_t *size)
+void ft_stack_pop(int **stack, size_t *size)
 {
     int *new_stack;
 
