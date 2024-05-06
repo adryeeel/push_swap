@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_convert_stack.c                                 :+:      :+:    :+:   */
+/*   ft_stack_convert.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 16:38:13 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/04/26 17:15:48 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/07 00:43:02 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	*ft_convert_stack(const char *raw_stack[], size_t size)
+int	*ft_stack_convert(const char *raw_stack[], size_t size)
 {
 	int	*int_stack;
 
