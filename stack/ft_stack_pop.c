@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 00:17:28 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/07 00:42:36 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/08 00:33:48 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void ft_stack_pop(int **stack, size_t *size)
 {
     int *new_stack;
 
-    if (*size == 0)
+    if (!*size || !*stack)
         return;
 
     new_stack = ft_calloc(--(*size), sizeof(int));
@@ -24,9 +24,7 @@ void ft_stack_pop(int **stack, size_t *size)
     if (!new_stack)
         return;
 
-    while ((*size)-- > 0)
-        new_stack[*size] = (*stack)[*size];
-
+    ft_memmove(new_stack, *stack + 1, (*size) * sizeof(int));
     free(*stack);
     *stack = new_stack;
 }
