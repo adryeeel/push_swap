@@ -6,13 +6,13 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 16:38:13 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/07 00:43:02 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/07 20:17:57 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	*ft_stack_convert(const char *raw_stack[], size_t size)
+int	*ft_stack_convert(const char **raw_stack, size_t size)
 {
 	int	*int_stack;
 
