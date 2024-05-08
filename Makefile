@@ -44,6 +44,7 @@ SORT_SRCS =	ft_sa.c \
 						ft_sb.c \
 						ft_ss.c \
 						ft_pa.c \
+						ft_pb.c \
 
 SORT_DIR = sort
 SORT_OBJS = $(addprefix $(BUILD_DIR)/, $(SORT_SRCS:.c=.o))
