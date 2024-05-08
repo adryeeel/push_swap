@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 23:38:38 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/08 01:36:55 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/08 01:49:51 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 bool ft_stack_rotate(int *stack, size_t size)
 {
 	int tmp;
+	
+	if (!stack || !size)
+		return (false);
 
 	tmp = stack[size - 1];
 
