@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 23:35:23 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/07 20:17:34 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/08 01:55:38 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ bool ft_stack_swap(int *stack, size_t size)
 {
 	int tmp;
 
-	if (size <= 1)
+	if (size <= 1 || !stack)
 		return (false);
 	tmp = stack[0];
 	stack[0] = stack[1];
