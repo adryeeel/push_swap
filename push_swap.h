@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 01:07:13 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/09 00:19:00 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/09 00:24:21 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,26 @@ bool ft_check_args(const char *stack[], size_t size);
 bool ft_check_dups(const char *stack[], size_t size);
 bool ft_check_overflow(const char *stack[], size_t size);
 
-void ft_sa(int *stack_a, size_t size_a);
-void ft_sb(int *stack_b, size_t size_b);
-void ft_ss(int *stack_a, int *stack_b, int sa_size, int sb_size);
-
-void ft_pa(int **stack_a, int **stack_b, size_t *sa_size, size_t *sb_size);
-void ft_pb(int **stack_a, int **stack_b, size_t *sa_size, size_t *sb_size);
-
-void ft_ra(int *stack_a, size_t size);
-void ft_rb(int *stack_b, size_t size);
-void ft_rr(int *stack_a, int *stack_b, size_t sa_size, size_t sb_size);
-
 bool ft_stack_swap(int *stack, size_t size);
 bool ft_stack_pop(int **stack, size_t *size);
 bool ft_stack_rotate(int *stack, size_t size);
 bool ft_stack_rrotate(int *stack, size_t size);
 int *ft_stack_convert(const char **raw_stack, size_t size);
 bool ft_stack_push(int **stack, int new_value, size_t *size);
+
+void ft_sa(int *stack_a, size_t size_a);
+void ft_sb(int *stack_b, size_t size_b);
+void ft_ss(int *stack_a, int *stack_b, int sa_size, int sb_size);
+
+void ft_ra(int *stack_a, size_t size);
+void ft_rb(int *stack_b, size_t size);
+void ft_rr(int *stack_a, int *stack_b, size_t sa_size, size_t sb_size);
+
+void ft_rra(int *stack_a, size_t size);
+void ft_rrb(int *stack_b, size_t size);
+void ft_rrr(int *stack_a, int *stack_b, size_t sa_size, size_t sb_size);
+
+void ft_pa(int **stack_a, int **stack_b, size_t *sa_size, size_t *sb_size);
+void ft_pb(int **stack_a, int **stack_b, size_t *sa_size, size_t *sb_size);
 
 #endif
