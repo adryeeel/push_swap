@@ -28,14 +28,27 @@ CHECKER_OBJS = $(addprefix $(BUILD_DIR)/, $(CHECKER_SRCS:.c=.o))
 
 # Stack handling functions
 
-STACK_SRCS =	ft_convert_stack.c \
+STACK_SRCS =	ft_stack_pop.c \
+							ft_stack_push.c \
+							ft_stack_swap.c \
+							ft_stack_convert.c \
 
 STACK_DIR = stack
 STACK_OBJS = $(addprefix $(BUILD_DIR)/, $(STACK_SRCS:.c=.o))
 
+# Sort operation functions
+
+SORT_SRCS =	ft_sa.c \
+						ft_sb.c \
+						ft_ss.c \
+						ft_pa.c \
+
+SORT_DIR = sort
+SORT_OBJS = $(addprefix $(BUILD_DIR)/, $(SORT_SRCS:.c=.o))
+
 all: $(NAME)
 
-$(NAME): $(OBJS) $(CHECKER_OBJS) $(STACK_OBJS) | $(LIBFT_DIR)/$(LIBFT)
+$(NAME): $(OBJS) $(CHECKER_OBJS) $(STACK_OBJS) $(SORT_OBJS) | $(LIBFT_DIR)/$(LIBFT)
 	$(CC) $(CFLAGS) $^ $(LIBFT_LINK) -o $(NAME) 
 
 $(BUILD_DIR)/%.o: %.c | $(BUILD_DIR)
@@ -45,6 +58,9 @@ $(BUILD_DIR)/%.o: $(CHECKER_DIR)/%.c | $(BUILD_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(BUILD_DIR)/%.o: $(STACK_DIR)/%.c | $(BUILD_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(BUILD_DIR)/%.o: $(SORT_DIR)/%.c | $(BUILD_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(LIBFT_DIR)/$(LIBFT):
