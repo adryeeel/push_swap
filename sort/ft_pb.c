@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 00:57:22 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/08 00:58:29 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/08 01:54:07 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void ft_pb(int **stack_a, int **stack_b, size_t *sa_size, size_t *sb_size)
 {
-	if (*sa_size == 0)
+	if (!*sa_size || !*stack_a)
 		return;
 
 	ft_stack_push(stack_b, **stack_a, sb_size);
