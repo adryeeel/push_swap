@@ -1,21 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sa.c                                            :+:      :+:    :+:   */
+/*   ft_sort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/06 23:48:53 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/08 01:57:30 by arocha-b         ###   ########.fr       */
+/*   Created: 2024/05/06 23:28:20 by arocha-b          #+#    #+#             */
+/*   Updated: 2024/05/08 01:03:56 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-void ft_sa(int *stack_a, size_t size_a)
+void ft_sort(int *stack_a, int *stack_b, size_t size)
 {
-	if (!ft_stack_swap(stack_a, size_a))
-		return;
-
-	ft_putendl_fd("sa", STDOUT_FILENO);
 }
