@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 01:07:13 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/25 00:11:59 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/25 00:16:43 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,6 @@ void ft_rrb(int *stack_b, size_t size);
 void ft_rrr(int *stack_a, int *stack_b, size_t sa_size, size_t sb_size);
 
 void ft_pa(t_stack *stack_a, t_stack *stack_b);
-void ft_pb(int **stack_a, int **stack_b, size_t *sa_size, size_t *sb_size);
+void ft_pb(t_stack *stack_a, t_stack *stack_b);
 
 #endif
