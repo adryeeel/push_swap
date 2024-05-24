@@ -6,29 +6,29 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 23:38:34 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/08 00:46:08 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/24 22:07:49 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-bool ft_stack_push(int **stack, int new_value, size_t *size)
+bool ft_stack_push(t_stack *stack, int new_value)
 {
 	int *new_stack;
-
-	new_stack = ft_calloc(++(*size), sizeof(int));
+	
+	new_stack = ft_calloc(++(stack->size), sizeof(int));
 
 	if (!new_stack)
 		return (false);
 
 	new_stack[0] = new_value;
 
-	if (*stack)
+	if (stack->data)
 	{
-		ft_memmove(new_stack + 1, *stack, ((*size) - 1) * sizeof(int));
-		free(*stack);
+		ft_memmove(new_stack + 1, stack->data, ((stack->size) - 1) * sizeof(int));
+		free(stack->data);
 	}
 
-	*stack = new_stack;
+	stack->data = new_stack;
 	return (true);
 }
