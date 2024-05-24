@@ -6,16 +6,19 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 00:02:28 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/07 20:34:20 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/25 00:27:36 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void ft_ss(int *stack_a, int *stack_b, int sa_size, int sb_size)
+void ft_ss(t_stack *stack_a, t_stack *stack_b)
 {
-	if (!ft_stack_swap(stack_a, sa_size) || !ft_stack_swap(stack_b, sb_size))
+	if (!stack_a || !stack_b || !stack_a->size || !stack_b->size)
 		return;
+
+	ft_stack_swap(stack_a);
+	ft_stack_swap(stack_b);
 
 	ft_putendl_fd("ss", STDOUT_FILENO);
 }
