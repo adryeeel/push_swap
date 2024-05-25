@@ -19,11 +19,11 @@ OBJS = $(addprefix $(BUILD_DIR)/, $(SRCS:.c=.o))
 # Checker functions
 
 CHECKER_SRCS =	ft_check_nan.c \
-								ft_check_args.c	\
 								ft_check_dups.c	\
+								ft_check_args.c	\
 								ft_check_overflow.c	\
 
-CHECKER_DIR = checker
+CHECKER_DIR = check
 CHECKER_OBJS = $(addprefix $(BUILD_DIR)/, $(CHECKER_SRCS:.c=.o))
 
 # Stack handling functions
