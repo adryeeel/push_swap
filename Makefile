@@ -20,6 +20,7 @@ OBJS = $(addprefix $(BUILD_DIR)/, $(SRCS:.c=.o))
 
 CHECKER_SRCS =	ft_check_nan.c \
 								ft_check_dups.c	\
+								ft_check_sort.c	\
 								ft_check_args.c	\
 								ft_check_overflow.c	\
 
