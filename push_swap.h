@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 01:07:13 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/25 00:29:36 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/25 23:58:40 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,18 @@ typedef struct s_stack
 
 } t_stack;
 
-bool ft_check_nan(const char *stack[], size_t size);
-bool ft_check_args(const char *stack[], size_t size);
-bool ft_check_dups(const char *stack[], size_t size);
-bool ft_check_overflow(const char *stack[], size_t size);
+bool ft_check_nan(const char *raw_stack[], size_t size);
+bool ft_check_sort(const char *raw_stack[], size_t size);
+bool ft_check_args(const char *raw_stack[], size_t size);
+bool ft_check_dups(const char *raw_stack[], size_t size);
+bool ft_check_overflow(const char *raw_stack[], size_t size);
 
 void ft_stack_pop(t_stack *stack);
 void ft_stack_swap(t_stack *stack);
 void ft_stack_rotate(t_stack *stack);
 void ft_stack_rrotate(t_stack *stack);
 void ft_stack_destroy(t_stack *stack);
-void ft_stack_push( t_stack *stack, int new_value);
+void ft_stack_push(t_stack *stack, int new_value);
 int *ft_stack_convert(const char **raw_stack, size_t size);
 t_stack *ft_stack_create(const char **raw_stack, size_t size);
 
