@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 01:13:28 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/04/26 15:16:32 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/25 23:57:43 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ static bool ft_isnum(const char *s)
 	return (true);
 }
 
-bool ft_check_nan(const char *stack[], size_t size)
+bool ft_check_nan(const char *raw_stack[], size_t size)
 {
 	size_t i;
 
 	i = 0;
 	while (i < size)
 	{
-		if (!ft_isnum(stack[i]))
+		if (!ft_isnum(raw_stack[i]))
 			return (false);
 		i++;
 	}
