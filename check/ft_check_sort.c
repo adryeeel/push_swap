@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/25 00:32:38 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/25 23:57:12 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/26 00:00:13 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,5 @@ bool ft_check_sort(const char *raw_stack[], size_t size)
 		if (curr > prev)
 			return (false);
 	}
-
 	return (true);
 }
