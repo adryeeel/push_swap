@@ -6,13 +6,13 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 23:38:13 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/25 00:11:25 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/26 00:03:20 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-bool ft_stack_rrotate(t_stack *stack)
+void ft_stack_rrotate(t_stack *stack)
 {
 	int tmp;
 
