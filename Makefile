@@ -32,7 +32,11 @@ CHECKER_OBJS = $(addprefix $(BUILD_DIR)/, $(CHECKER_SRCS:.c=.o))
 STACK_SRCS =	ft_stack_pop.c \
 							ft_stack_push.c \
 							ft_stack_swap.c \
+							ft_stack_sort.c \
 							ft_stack_rotate.c \
+							ft_stack_create.c \
+							ft_stack_destroy.c \
+							ft_stack_process.c \
 							ft_stack_rrotate.c \
 							ft_stack_convert.c \
 
