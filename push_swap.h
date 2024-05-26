@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 01:07:13 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/25 23:58:40 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/27 00:05:22 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,9 @@ void ft_stack_rotate(t_stack *stack);
 void ft_stack_rrotate(t_stack *stack);
 void ft_stack_destroy(t_stack *stack);
 void ft_stack_push(t_stack *stack, int new_value);
+void ft_stack_sort(t_stack *stack_a, t_stack *stack_b);
 int *ft_stack_convert(const char **raw_stack, size_t size);
+void ft_stack_process(const char *raw_stack[], size_t size);
 t_stack *ft_stack_create(const char **raw_stack, size_t size);
 
 void ft_sa(t_stack *stack_a);
