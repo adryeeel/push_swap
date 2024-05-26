@@ -22,7 +22,11 @@ t_stack *ft_stack_create(const char **raw_stack, size_t size)
 		return (NULL);
 
 	stack->size = size;
-	stack->data = ft_stack_convert(raw_stack, size);
+
+	if (raw_stack)
+		stack->data = ft_stack_convert(raw_stack, size);
+	else
+		stack->data = NULL;
 
 	return (stack);
 }
