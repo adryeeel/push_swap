@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 23:38:38 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/28 00:14:45 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/31 01:02:05 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,14 @@ void ft_stack_rotate(t_stack *stack)
 	tmp = stack->data[0];
 	ft_memmove(stack->data, stack->data + 1, (stack->size - 1) * sizeof(int));
 	stack->data[stack->size - 1] = tmp;
+
+	if (stack->max == 0)
+		stack->max = stack->size - 1;
+	else
+		stack->max--;
+
+	if (stack->min == 0)
+		stack->min = stack->size - 1;
+	else
+		stack->min--;
 }
