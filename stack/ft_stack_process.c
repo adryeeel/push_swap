@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 23:53:09 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/28 01:35:38 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/31 17:12:29 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void ft_stack_print(t_stack *stack)
 		ft_printf("%d ", stack->data[i]);
 		i++;
 	}
-	ft_printf(": %d\n", stack->size);
+	ft_printf(": s %d : M %d : m %d\n", stack->size, stack->max, stack->min);
 }
 
 void ft_stack_process(const char *raw_stack[], size_t size)
