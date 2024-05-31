@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 01:07:13 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/27 00:05:22 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/30 21:20:45 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 typedef struct s_stack
 {
 	int *data;
+	size_t min;
+	size_t max;
 	size_t size;
 
 } t_stack;
@@ -29,6 +31,8 @@ bool ft_check_args(const char *raw_stack[], size_t size);
 bool ft_check_dups(const char *raw_stack[], size_t size);
 bool ft_check_overflow(const char *raw_stack[], size_t size);
 
+int ft_stack_min(t_stack *stack);
+int ft_stack_max(t_stack *stack);
 void ft_stack_pop(t_stack *stack);
 void ft_stack_swap(t_stack *stack);
 void ft_stack_rotate(t_stack *stack);
