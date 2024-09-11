@@ -1,4 +1,4 @@
 .vscode
-build/
-push_swap
+**/build/
 **/*.a
+**/*.o
