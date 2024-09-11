@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stack_swap.c                                    :+:      :+:    :+:   */
+/*   ft_stack_min.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/06 23:35:23 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/31 17:06:22 by arocha-b         ###   ########.fr       */
+/*   Created: 2024/05/30 21:05:33 by arocha-b          #+#    #+#             */
+/*   Updated: 2024/05/30 21:07:25 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void ft_stack_swap(t_stack *stack)
+int ft_stack_min(t_stack *stack)
 {
-	int tmp;
+	int min;
+	size_t i;
 
-	if (stack->size <= 1 || !stack)
-		return;
+	i = 0;
+	min = 0;
 
-	tmp = stack->data[0];
-	stack->data[0] = stack->data[1];
-	stack->data[1] = tmp;
+	while (i < stack->size)
+	{
+		if (stack->data[i] < stack->data[min])
+			min = i;
+		i++;
+	}
 
-	if (stack->max == 0)
-		stack->max = 1;
-	else if (stack->max == 1)
-		stack->max = 0;
-
-	if (stack->min == 0)
-		stack->min = 1;
-	else if (stack->min == 1)
-		stack->min = 0;
+	return (min);
 }

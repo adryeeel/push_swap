@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 16:38:13 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/05/24 22:08:30 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/05/31 00:48:57 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 int *ft_stack_convert(const char **raw_stack, size_t size)
 {
 	int *data;
+
+	if (!raw_stack)
+		return (NULL);
 
 	data = ft_calloc(size, sizeof(int));
 
