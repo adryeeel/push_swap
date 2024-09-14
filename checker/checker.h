@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 20:11:58 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/09/14 18:19:49 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/09/14 18:24:45 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,15 +51,6 @@ bool ft_acts_check(char *act);
 t_action ft_acts_type(char *act);
 void ft_acts_push(t_intarr **acts, char *act);
 void ft_acts_exec(t_intarr *acts, t_stack *sa, t_stack *sb);
-
-/**
- * Validate action functions
- */
-
-bool ft_check_swap(char *act);
-bool ft_check_push(char *act);
-bool ft_check_rotate(char *act);
-bool ft_check_rrotate(char *act);
 
 /**
  * Action type getter functions
