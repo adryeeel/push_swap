@@ -65,7 +65,6 @@ STACK_SRCS =	ft_stack_pop.c \
 							ft_stack_init.c \
 							ft_stack_swap.c \
 							ft_stack_sort.c \
-							ft_stack_print.c \
 							ft_stack_rotate.c \
 							ft_stack_create.c \
 							ft_stack_destroy.c \
