@@ -148,16 +148,6 @@ C_ACTS_SRCS =	ft_acts_read.c \
 C_ACTS_DIR = $(CHECKER_DIR)/acts
 C_ACTS_OBJS = $(addprefix $(BUILD_DIR)/, $(C_ACTS_SRCS:.c=.o))
 
-# Acts validation functions for checker
-
-C_CHECK_SRCS =	ft_check_push.c \
-								ft_check_swap.c \
-								ft_check_rotate.c \
-								ft_check_rrotate.c \
-
-C_CHECK_DIR = $(CHECKER_DIR)/check
-C_CHECK_OBJS = $(addprefix $(BUILD_DIR)/, $(C_CHECK_SRCS:.c=.o))
-
 # Acts type functions for checker
 
 C_TYPE_SRCS =	ft_type_push.c \
@@ -183,7 +173,7 @@ bonus: $(CHECKER)
 $(NAME): $(PS_OBJS) $(ACTS_OBJS) $(STACK_OBJS) $(SOLVE_OBJS) $(S_CALC_OBJS) $(S_CHECK_OBJS) $(S_EXEC_OBJS) $(S_FIND_OBJS) $(ARGS_OBJS) $(A_CHECK_OBJS) $(LIBFT_DIR)/$(LIBFT)
 	@$(CC) $(CFLAGS) $^ $(LIBFT_LINK) -o $(PS_DIR)/$@
 
-$(CHECKER): $(CHECKER_OBJS) $(ARGS_OBJS) $(ACTS_OBJS) $(STACK_OBJS) $(SOLVE_OBJS) $(S_CHECK_OBJS) $(S_EXEC_OBJS) $(S_FIND_OBJS) $(S_CALC_OBJS) $(A_CHECK_OBJS) $(C_ACTS_OBJS) $(C_CHECK_OBJS) $(C_TYPE_OBJS) $(C_EXEC_OBJS) $(LIBFT_DIR)/$(LIBFT)
+$(CHECKER): $(CHECKER_OBJS) $(ARGS_OBJS) $(ACTS_OBJS) $(STACK_OBJS) $(SOLVE_OBJS) $(S_CHECK_OBJS) $(S_EXEC_OBJS) $(S_FIND_OBJS) $(S_CALC_OBJS) $(A_CHECK_OBJS) $(C_ACTS_OBJS) $(C_TYPE_OBJS) $(C_EXEC_OBJS) $(LIBFT_DIR)/$(LIBFT)
 	@$(CC) $(CFLAGS) $^ -o $(CHECKER_DIR)/$@
 
 $(BUILD_DIR)/%.o: $(PS_DIR)/%.c | $(BUILD_DIR)
@@ -220,9 +210,6 @@ $(BUILD_DIR)/%.o: $(CHECKER_DIR)/%.c | $(BUILD_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(BUILD_DIR)/%.o: $(C_ACTS_DIR)/%.c | $(BUILD_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
-
-$(BUILD_DIR)/%.o: $(C_CHECK_DIR)/%.c | $(BUILD_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(BUILD_DIR)/%.o: $(C_TYPE_DIR)/%.c | $(BUILD_DIR)
