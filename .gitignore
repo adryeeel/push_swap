@@ -2,3 +2,5 @@
 **/build/
 **/*.a
 **/*.o
+checker/checker
+push_swap/push_swap
