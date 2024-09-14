@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 20:11:58 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/09/10 02:02:10 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/09/14 18:19:49 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef enum e_action
 	RRA,
 	RRB,
 	RRR,
+	UNKNOWN,
 } t_action;
 
 #include "../push_swap/push_swap.h"
