@@ -12,9 +12,9 @@
 
 #include "ft_strarr.h"
 
-static void ft_copy(char *dst[], char *src[], size_t len)
+static void	ft_copy(char *dst[], char *src[], size_t len)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < len)
@@ -24,26 +24,21 @@ static void ft_copy(char *dst[], char *src[], size_t len)
 	}
 }
 
-t_strarr *ft_strarr_push(t_strarr *strarr, char *str)
+t_strarr	*ft_strarr_push(t_strarr *strarr, char *str)
 {
-	t_strarr *new;
+	t_strarr	*new;
 
 	new = ft_strarr_create();
-
 	if (!new)
 		return (NULL);
-
 	new->length = strarr->length + 1;
 	new->data = ft_calloc(strarr->length + 1 + NULL_BYTE, sizeof(char *));
-	
 	if (!new->data)
 	{
 		free(new);
 		return (NULL);
 	}
-
 	ft_copy(new->data, strarr->data, strarr->length);
 	new->data[strarr->length] = ft_strdup(str);
-
 	return (new);
 }

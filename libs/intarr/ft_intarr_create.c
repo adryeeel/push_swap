@@ -12,17 +12,14 @@
 
 #include "ft_intarr.h"
 
-t_intarr *ft_intarr_create(void)
+t_intarr	*ft_intarr_create(void)
 {
-	t_intarr *intarr;
+	t_intarr	*intarr;
 
 	intarr = ft_calloc(1, sizeof(t_intarr));
-
 	if (!intarr)
 		return (NULL);
-
 	intarr->length = 0;
 	intarr->data = NULL;
-
 	return (intarr);
 }

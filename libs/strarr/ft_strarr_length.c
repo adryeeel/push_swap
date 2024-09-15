@@ -12,13 +12,12 @@
 
 #include "ft_strarr.h"
 
-size_t ft_strarr_length(char *strarr[])
+size_t	ft_strarr_length(char *strarr[])
 {
-	size_t i;
+	size_t	i;
 
 	if (!strarr)
 		return (0);
-
 	i = 0;
 	while (strarr[i])
 		i++;

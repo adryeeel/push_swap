@@ -12,9 +12,9 @@
 
 #include "ft_strarr.h"
 
-void ft_strarr_free(t_strarr *strarr)
+void	ft_strarr_free(t_strarr *strarr)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < strarr->length)

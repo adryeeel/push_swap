@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_convert.h"
 #include "../ctype/ft_ctype.h"
+#include "ft_convert.h"
 
-long ft_atol(const char *nptr)
+long	ft_atol(const char *nptr)
 {
 	long	num;
 	int		sign;

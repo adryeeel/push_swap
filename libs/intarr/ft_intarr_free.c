@@ -12,13 +12,11 @@
 
 #include "ft_intarr.h"
 
-void ft_intarr_free(t_intarr *intarr)
+void	ft_intarr_free(t_intarr *intarr)
 {
 	if (!intarr)
-		return;
-
+		return ;
 	if (intarr->data)
 		free(intarr->data);
-
 	free(intarr);
 }

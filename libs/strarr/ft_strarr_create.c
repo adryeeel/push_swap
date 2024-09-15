@@ -12,17 +12,14 @@
 
 #include "ft_strarr.h"
 
-t_strarr *ft_strarr_create(void)
+t_strarr	*ft_strarr_create(void)
 {
-	t_strarr *new;
+	t_strarr	*new;
 
 	new = ft_calloc(1, sizeof(t_strarr));
-	
 	if (!new)
 		return (NULL);
-	
 	new->length = 0;
 	new->data = NULL;
-
 	return (new);
 }

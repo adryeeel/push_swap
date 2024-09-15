@@ -12,9 +12,9 @@
 
 #include "ft_intarr.h"
 
-static void ft_copy(int *dst, int *src, size_t len)
+static void	ft_copy(int *dst, int *src, size_t len)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < len)
@@ -24,29 +24,23 @@ static void ft_copy(int *dst, int *src, size_t len)
 	}
 }
 
-t_intarr *ft_intarr_push(t_intarr *intarr, int value)
+t_intarr	*ft_intarr_push(t_intarr *intarr, int value)
 {
-	t_intarr *new;
-	
+	t_intarr	*new;
+
 	if (!intarr)
-		return (NULL);	
-
+		return (NULL);
 	new = ft_intarr_create();
-
 	if (!new)
-		return (NULL);	
-
+		return (NULL);
 	new->length = intarr->length + 1;
 	new->data = ft_calloc(intarr->length + 1, sizeof(int));
-	
 	if (!new->data)
 	{
 		free(new);
 		return (NULL);
 	}
-
 	ft_copy(new->data, intarr->data, intarr->length);
 	new->data[intarr->length] = value;
-
 	return (new);
 }
