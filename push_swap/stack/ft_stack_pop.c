@@ -12,29 +12,24 @@
 
 #include "../push_swap.h"
 
-void ft_stack_pop(t_stack *stack)
+void	ft_stack_pop(t_stack *stack)
 {
-    int *new_data;
+	int	*new_data;
 
-    if (!stack || !stack->size)
-        return;
-
-    new_data = ft_calloc(--(stack->size), sizeof(int));
-
-    if (!new_data)
-        return;
-
-    ft_memmove(new_data, stack->data + 1, (stack->size) * sizeof(int));
-    free(stack->data);
-    stack->data = new_data;
-
-    if (stack->max == 0)
-        stack->max = ft_stack_max(stack);
-    else
-        stack->max--;
-
-    if (stack->min == 0)
-        stack->min = ft_stack_min(stack);
-    else
-        stack->min--;
+	if (!stack || !stack->size)
+		return ;
+	new_data = ft_calloc(--(stack->size), sizeof(int));
+	if (!new_data)
+		return ;
+	ft_memmove(new_data, stack->data + 1, (stack->size) * sizeof(int));
+	free(stack->data);
+	stack->data = new_data;
+	if (stack->max == 0)
+		stack->max = ft_stack_max(stack);
+	else
+		stack->max--;
+	if (stack->min == 0)
+		stack->min = ft_stack_min(stack);
+	else
+		stack->min--;
 }

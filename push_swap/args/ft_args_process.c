@@ -12,17 +12,15 @@
 
 #include "../push_swap.h"
 
-t_strarr *ft_args_process(char *argv[], int argc)
+t_strarr	*ft_args_process(char *argv[], int argc)
 {
-	int i;
-	t_strarr *input;
+	int			i;
+	t_strarr	*input;
 
 	i = 0;
 	input = ft_strarr_create();
-
 	if (!input)
 		return (NULL);
-
 	while (i < argc)
 	{
 		if (ft_check_quote(argv[i]))
@@ -31,6 +29,5 @@ t_strarr *ft_args_process(char *argv[], int argc)
 			ft_args_push(&input, argv[i]);
 		i++;
 	}
-
 	return (input);
 }

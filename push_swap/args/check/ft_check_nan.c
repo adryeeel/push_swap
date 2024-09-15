@@ -12,34 +12,31 @@
 
 #include "../../push_swap.h"
 
-static bool ft_issigned(const char *s)
+static bool	ft_issigned(const char *s)
 {
 	if ((*s == '-' || *s == '+') && ft_isdigit(*(s + 1)))
 		return (true);
 	return (false);
 }
 
-static bool ft_isnum(const char *s)
+static bool	ft_isnum(const char *s)
 {
 	if (!*s)
 		return (false);
-
 	if (ft_issigned(s))
 		s++;
-
 	while (*s)
 	{
 		if (!ft_isdigit(*s))
 			return (false);
 		s++;
 	}
-
 	return (true);
 }
 
-bool ft_check_nan(t_strarr *input)
+bool	ft_check_nan(t_strarr *input)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < input->length)

@@ -12,15 +12,13 @@
 
 #include "../push_swap.h"
 
-void ft_rra(size_t n, t_stack *stack_a, bool print)
+void	ft_rra(size_t n, t_stack *stack_a, bool print)
 {
 	if (!stack_a || !stack_a->size)
-		return;
-
+		return ;
 	while (n-- > 0)
 	{
 		ft_stack_rrotate(stack_a);
-
 		if (print)
 			ft_putendl_fd("rra", STDOUT_FILENO);
 	}

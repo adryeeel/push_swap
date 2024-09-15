@@ -12,22 +12,18 @@
 
 #include "../push_swap.h"
 
-void ft_stack_process(t_strarr *input)
+void	ft_stack_process(t_strarr *input)
 {
-	t_stack *stack_a;
-	t_stack *stack_b;
+	t_stack	*stack_a;
+	t_stack	*stack_b;
 
 	stack_a = ft_stack_create();
 	stack_b = ft_stack_create();
-
 	if (!stack_a || !stack_b)
-		return;
-
+		return ;
 	ft_stack_init(&stack_b, NULL);
 	ft_stack_init(&stack_a, input->data);
-
 	ft_stack_sort(stack_a, stack_b);
-
 	ft_stack_destroy(stack_a);
 	ft_stack_destroy(stack_b);
 }

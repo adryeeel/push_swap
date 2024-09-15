@@ -12,18 +12,16 @@
 
 #include "../../push_swap.h"
 
-bool ft_check_sa(t_stack *stack_a)
+bool	ft_check_sa(t_stack *stack_a)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
-
 	while (i < stack_a->size - 1)
 	{
 		if (stack_a->data[i] > stack_a->data[i + 1])
 			return (false);
 		i++;
 	}
-
 	return (true);
 }

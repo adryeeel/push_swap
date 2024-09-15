@@ -12,21 +12,18 @@
 
 #include "../push_swap.h"
 
-int ft_stack_max(t_stack *stack)
+int	ft_stack_max(t_stack *stack)
 {
-	int max;
-	size_t i;
+	int		max;
+	size_t	i;
 
 	i = 0;
 	max = 0;
-
 	while (i < stack->size)
 	{
 		if (stack->data[i] > stack->data[max])
 			max = i;
 		i++;
 	}
-
 	return (max);
 }
-

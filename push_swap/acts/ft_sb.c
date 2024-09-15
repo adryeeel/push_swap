@@ -12,15 +12,13 @@
 
 #include "../push_swap.h"
 
-void ft_sb(size_t n, t_stack *stack_b, bool print)
+void	ft_sb(size_t n, t_stack *stack_b, bool print)
 {
 	if (!stack_b || !stack_b->size)
-		return;
-
+		return ;
 	while (n-- > 0)
 	{
 		ft_stack_swap(stack_b);
-
 		if (print)
 			ft_putendl_fd("sb", STDOUT_FILENO);
 	}

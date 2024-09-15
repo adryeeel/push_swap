@@ -12,18 +12,17 @@
 
 #include "../../push_swap.h"
 
-bool ft_check_sort(t_strarr *input)
+bool	ft_check_sort(t_strarr *input)
 {
-	int curr;
-	int prev;
-	size_t len;
+	int		curr;
+	int		prev;
+	size_t	len;
 
 	len = input->length;
 	while (--len > 0)
 	{
 		curr = ft_atoi(input->data[len]);
 		prev = ft_atoi(input->data[len - 1]);
-
 		if (curr < prev)
 			return (false);
 	}

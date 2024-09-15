@@ -12,21 +12,19 @@
 
 #include "../../push_swap.h"
 
-size_t ft_calc_rra_rb(size_t sa_idx, size_t sb_idx, size_t sa_size, size_t sb_size)
+size_t	ft_calc_rra_rb(size_t sa_idx, size_t sb_idx, size_t sa_size,
+		size_t sb_size)
 {
-	size_t total;
-	size_t ra_ops;
-	size_t rb_ops;
+	size_t	total;
+	size_t	ra_ops;
+	size_t	rb_ops;
 
 	ra_ops = sa_size - sa_idx;
 	rb_ops = sb_size - sb_idx;
 	total = rb_ops;
-
 	if (ra_ops > rb_ops)
 		total = ra_ops;
-
 	if (total < sb_idx + ra_ops)
 		return (total);
-
 	return (sb_idx + ra_ops);
 }
