@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../checker.h"	
+#include "../checker.h"
 
-void ft_exec_swap(t_action act, t_stack *sa, t_stack *sb)
+void	ft_exec_swap(t_action act, t_stack *sa, t_stack *sb)
 {
 	if (act == SA)
 		ft_sa(1, sa, false);

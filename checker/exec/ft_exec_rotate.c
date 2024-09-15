@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../checker.h"	
+#include "../checker.h"
 
-void ft_exec_rotate(t_action act, t_stack *sa, t_stack *sb)
+void	ft_exec_rotate(t_action act, t_stack *sa, t_stack *sb)
 {
 	if (act == RA)
 		ft_ra(1, sa, false);

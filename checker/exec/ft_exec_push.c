@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../checker.h"	
+#include "../checker.h"
 
-void ft_exec_push(t_action act, t_stack *sa, t_stack *sb)
+void	ft_exec_push(t_action act, t_stack *sa, t_stack *sb)
 {
 	if (act == PA)
 		ft_pa(1, sa, sb, false);

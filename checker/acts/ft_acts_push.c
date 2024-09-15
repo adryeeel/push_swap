@@ -12,14 +12,13 @@
 
 #include "../checker.h"
 
-void ft_acts_push(t_intarr **acts, char *act)
+void	ft_acts_push(t_intarr **acts, char *act)
 {
-	t_intarr *new;
-	t_action action;
+	t_intarr	*new;
+	t_action	action;
 
 	action = ft_acts_type(act);
 	new = ft_intarr_push(*acts, (int)action);
 	ft_intarr_free(*acts);
-
 	*acts = new;
 }
