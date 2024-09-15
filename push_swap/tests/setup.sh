@@ -2,11 +2,12 @@
 
 set -euo pipefail
 
-ROOT=$HOME/push_swap2
+ROOT=$(cd "$(dirname "$0")" && cd ../../ && pwd)
 
 MK_PATH=$ROOT
-PS_BIN=$ROOT/push_swap/push_swap
-CK_BIN=$ROOT/push_swap/tests/checker_linux
+PS_DIR=$ROOT/push_swap
+PS_BIN=$PS_DIR/push_swap
+CK_BIN=$PS_DIR/tests/checker_linux
 
 if [[ ! -f $CK_BIN ]]; then
 	echo "Checker program not found."
