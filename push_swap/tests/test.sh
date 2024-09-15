@@ -2,8 +2,10 @@
 
 set -euo pipefail
 
-ROOT=$HOME/push_swap2/push_swap
-bash $ROOT/tests/setup.sh
-bash $ROOT/tests/test_args.sh
+ROOT=$(cd "$(dirname "$0")" && cd ../../ && pwd)
+TESTS_DIR=$ROOT/push_swap/tests
+
+bash $TESTS_DIR/setup.sh
+bash $TESTS_DIR/test_args.sh
 echo ""
-bash $ROOT/tests/test_sort.sh
+bash $TESTS_DIR/test_sort.sh

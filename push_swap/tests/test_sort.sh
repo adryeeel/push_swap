@@ -2,9 +2,11 @@
 
 set -euo pipefail
 
-ROOT=$HOME/push_swap2/push_swap
-PS_BIN=$ROOT/push_swap
-CK_BIN=$ROOT/tests/checker_linux
+ROOT=$(cd "$(dirname "$0")" && cd ../../ && pwd)
+
+PS_DIR=$ROOT/push_swap
+PS_BIN=$PS_DIR/push_swap
+CK_BIN=$PS_DIR/tests/checker_linux
 
 if [ ! -f $PS_BIN ]; then
 	echo "Push_swap binary not found. Please, execute the tests with test.sh script."
