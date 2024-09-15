@@ -12,7 +12,7 @@
 
 #include "../push_swap.h"
 
-void ft_stack_destroy(t_stack *stack)
+void	ft_stack_destroy(t_stack *stack)
 {
 	free(stack->data);
 	free(stack);

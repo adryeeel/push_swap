@@ -12,14 +12,12 @@
 
 #include "../push_swap.h"
 
-t_stack *ft_stack_create(void)
+t_stack	*ft_stack_create(void)
 {
-	t_stack *stack;
+	t_stack	*stack;
 
 	stack = malloc(sizeof(t_stack));
-
 	if (!stack)
 		return (NULL);
-
 	return (stack);
 }

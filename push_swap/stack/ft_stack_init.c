@@ -12,16 +12,15 @@
 
 #include "../push_swap.h"
 
-void ft_stack_init(t_stack **stack, char *data[])
+void	ft_stack_init(t_stack **stack, char *data[])
 {
-	size_t size;
-	
+	size_t	size;
+
 	size = ft_strarr_length(data);
 	(*stack)->max = 0;
 	(*stack)->min = 0;
 	(*stack)->size = size;
 	(*stack)->data = NULL;
-
 	if (data)
 	{
 		(*stack)->data = ft_stack_convert(data, size);

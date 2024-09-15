@@ -12,26 +12,20 @@
 
 #include "../push_swap.h"
 
-void ft_args_merge(t_strarr **input, char *s)
+void	ft_args_merge(t_strarr **input, char *s)
 {
-	t_strarr *new;
-	t_strarr *split;
+	t_strarr	*new;
+	t_strarr	*split;
 
 	split = ft_strarr_create();
-
 	if (!split)
-		return;
-
+		return ;
 	split->data = ft_split(s, ' ');
-
 	if (!split->data)
-		return;
-
+		return ;
 	split->length = ft_strarr_length(split->data);
-
 	new = ft_strarr_merge(*input, split);
 	ft_strarr_free(*input);
 	ft_strarr_free(split);
-
 	*input = new;
 }

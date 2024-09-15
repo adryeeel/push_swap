@@ -12,20 +12,16 @@
 
 #include "../push_swap.h"
 
-int *ft_stack_convert(char *input[], size_t size)
+int	*ft_stack_convert(char *input[], size_t size)
 {
-	int *data;
+	int	*data;
 
 	if (!input)
 		return (NULL);
-
 	data = ft_calloc(size, sizeof(int));
-
 	if (!data)
 		return (NULL);
-
 	while (size-- > 0)
 		data[size] = ft_atoi(input[size]);
-
 	return (data);
 }

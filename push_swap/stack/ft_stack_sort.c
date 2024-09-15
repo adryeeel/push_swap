@@ -12,20 +12,18 @@
 
 #include "../push_swap.h"
 
-void ft_stack_sort(t_stack *stack_a, t_stack *stack_b)
+void	ft_stack_sort(t_stack *stack_a, t_stack *stack_b)
 {
 	if (stack_a->size == 2)
 	{
 		ft_sa(1, stack_a, true);
-		return;
+		return ;
 	}
-
 	if (stack_a->size == 3)
 	{
 		ft_solve_three(stack_a);
-		return;
+		return ;
 	}
-
 	ft_solve_sb(stack_a, stack_b);
 	ft_solve_sa(stack_a, stack_b);
 }

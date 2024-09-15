@@ -12,7 +12,7 @@
 
 #include "../../push_swap.h"
 
-size_t ft_calc_ra_rb(size_t sa_idx, size_t sb_idx)
+size_t	ft_calc_ra_rb(size_t sa_idx, size_t sb_idx)
 {
 	if (sa_idx > sb_idx)
 		return (sa_idx);

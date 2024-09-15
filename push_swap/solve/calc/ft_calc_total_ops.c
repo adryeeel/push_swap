@@ -12,26 +12,21 @@
 
 #include "../../push_swap.h"
 
-size_t ft_calc_total_ops(size_t sa_idx, size_t sb_idx, size_t sa_size, size_t sb_size)
+size_t	ft_calc_total_ops(size_t sa_idx, size_t sb_idx, size_t sa_size,
+		size_t sb_size)
 {
-	size_t ops;
-	size_t total;
+	size_t	ops;
+	size_t	total;
 
 	total = ft_calc_ra_rb(sa_idx, sb_idx);
 	ops = ft_calc_rra_rrb(sa_idx, sb_idx, sa_size, sb_size);
-
 	if (total > ops)
 		total = ops;
-
 	ops = ft_calc_ra_rrb(sa_idx, sb_idx, sa_size, sb_size);
-
 	if (total > ops)
 		total = ops;
-
 	ops = ft_calc_rra_rb(sa_idx, sb_idx, sa_size, sb_size);
-
 	if (total > ops)
 		total = ops;
-
 	return (total);
 }

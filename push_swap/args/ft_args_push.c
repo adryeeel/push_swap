@@ -12,12 +12,11 @@
 
 #include "../push_swap.h"
 
-void ft_args_push(t_strarr **input, char *s)
+void	ft_args_push(t_strarr **input, char *s)
 {
-    t_strarr *new;
+	t_strarr	*new;
 
-    new = ft_strarr_push(*input, s);
-    ft_strarr_free(*input);
-
-    *input = new;
+	new = ft_strarr_push(*input, s);
+	ft_strarr_free(*input);
+	*input = new;
 }

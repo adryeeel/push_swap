@@ -12,27 +12,23 @@
 
 #include "push_swap.h"
 
-int main(int argc, const char *argv[])
+int	main(int argc, const char *argv[])
 {
-	t_strarr *input;
+	t_strarr	*input;
 
 	if (argc-- < 2)
 		return (EXIT_FAILURE);
-
 	input = ft_args_process((char **)++argv, argc);
-
 	if (!ft_args_check(input))
 	{
 		ft_strarr_free(input);
 		return (EXIT_FAILURE);
 	}
-
 	if (ft_check_sort(input))
 	{
 		ft_strarr_free(input);
 		return (EXIT_SUCCESS);
 	}
-
 	ft_stack_process(input);
 	ft_strarr_free(input);
 	return (EXIT_SUCCESS);

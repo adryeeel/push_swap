@@ -12,15 +12,13 @@
 
 #include "../push_swap.h"
 
-bool ft_args_check(t_strarr *input)
+bool	ft_args_check(t_strarr *input)
 {
-	if (!ft_check_nan(input) ||
-		!ft_check_dups(input) ||
-		!ft_check_overflow(input))
+	if (!ft_check_nan(input) || !ft_check_dups(input)
+		|| !ft_check_overflow(input))
 	{
 		ft_putendl_fd("Error", STDERR_FILENO);
 		return (false);
 	}
-
 	return (true);
 }

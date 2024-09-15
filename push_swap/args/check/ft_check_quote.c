@@ -12,7 +12,7 @@
 
 #include "../../push_swap.h"
 
-bool ft_check_quote(char *s)
+bool	ft_check_quote(char *s)
 {
 	while (*s)
 	{

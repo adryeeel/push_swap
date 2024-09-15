@@ -12,15 +12,13 @@
 
 #include "../push_swap.h"
 
-void ft_sa(size_t n, t_stack *stack_a, bool print)
+void	ft_sa(size_t n, t_stack *stack_a, bool print)
 {
 	if (!stack_a || !stack_a->size)
-		return;
-
+		return ;
 	while (n-- > 0)
 	{
 		ft_stack_swap(stack_a);
-
 		if (print)
 			ft_putendl_fd("sa", STDOUT_FILENO);
 	}

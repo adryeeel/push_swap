@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <limits.h>
 #include "../../push_swap.h"
+#include <limits.h>
 
-bool ft_check_overflow(t_strarr *input)
+bool	ft_check_overflow(t_strarr *input)
 {
-	size_t i;
-	long value;
+	size_t	i;
+	long	value;
 
 	i = 0;
 	while (i < input->length)

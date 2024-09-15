@@ -12,20 +12,18 @@
 
 #include "../push_swap.h"
 
-int ft_stack_min(t_stack *stack)
+int	ft_stack_min(t_stack *stack)
 {
-	int min;
-	size_t i;
+	int		min;
+	size_t	i;
 
 	i = 0;
 	min = 0;
-
 	while (i < stack->size)
 	{
 		if (stack->data[i] < stack->data[min])
 			min = i;
 		i++;
 	}
-
 	return (min);
 }

@@ -12,20 +12,18 @@
 
 #include "../../push_swap.h"
 
-bool ft_check_dups(t_strarr *input)
+bool	ft_check_dups(t_strarr *input)
 {
-	size_t i;
-	size_t j;
-	size_t len;
+	size_t	i;
+	size_t	j;
+	size_t	len;
 
 	i = 0;
 	j = 0;
-
 	while (i < input->length)
 	{
 		j = i + 1;
 		len = ft_strlen(input->data[i]) + 1;
-
 		while (j < input->length)
 		{
 			if (i != j && ft_strncmp(input->data[i], input->data[j], len) == 0)

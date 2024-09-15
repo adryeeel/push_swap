@@ -12,22 +12,19 @@
 
 #include "../push_swap.h"
 
-void ft_stack_swap(t_stack *stack)
+void	ft_stack_swap(t_stack *stack)
 {
-	int tmp;
+	int	tmp;
 
 	if (stack->size <= 1 || !stack)
-		return;
-
+		return ;
 	tmp = stack->data[0];
 	stack->data[0] = stack->data[1];
 	stack->data[1] = tmp;
-
 	if (stack->max == 0)
 		stack->max = 1;
 	else if (stack->max == 1)
 		stack->max = 0;
-
 	if (stack->min == 0)
 		stack->min = 1;
 	else if (stack->min == 1)

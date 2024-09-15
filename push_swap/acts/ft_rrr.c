@@ -12,16 +12,14 @@
 
 #include "../push_swap.h"
 
-void ft_rrr(size_t n, t_stack *stack_a, t_stack *stack_b, bool print)
+void	ft_rrr(size_t n, t_stack *stack_a, t_stack *stack_b, bool print)
 {
 	if (!stack_a || !stack_b || !stack_a->size || !stack_b->size)
-		return;
-
+		return ;
 	while (n-- > 0)
 	{
 		ft_stack_rrotate(stack_a);
 		ft_stack_rrotate(stack_b);
-
 		if (print)
 			ft_putendl_fd("rrr", STDOUT_FILENO);
 	}
