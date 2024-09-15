@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 00:07:10 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/09/10 01:57:33 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/09/15 01:10:15 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void ft_args_merge(t_strarr **input, char *s)
 
 	new = ft_strarr_merge(*input, split);
 	ft_strarr_free(*input);
+	ft_strarr_free(split);
 
 	*input = new;
 }
