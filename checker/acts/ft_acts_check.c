@@ -12,19 +12,15 @@
 
 #include "../checker.h"
 
-bool ft_acts_check(char *act)
+bool	ft_acts_check(char *act)
 {
 	if (ft_type_push(act) != UNKNOWN)
 		return (true);
-
 	if (ft_type_swap(act) != UNKNOWN)
 		return (true);
-
 	if (ft_type_rotate(act) != UNKNOWN)
 		return (true);
-
 	if (ft_type_rrotate(act) != UNKNOWN)
 		return (true);
-
 	return (false);
 }

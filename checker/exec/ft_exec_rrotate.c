@@ -12,7 +12,7 @@
 
 #include "../checker.h"
 
-void ft_exec_rrotate(t_action act, t_stack *sa, t_stack *sb)
+void	ft_exec_rrotate(t_action act, t_stack *sa, t_stack *sb)
 {
 	if (act == RRA)
 		ft_rra(1, sa, false);

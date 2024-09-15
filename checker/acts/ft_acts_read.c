@@ -12,18 +12,15 @@
 
 #include "../checker.h"
 
-t_intarr *ft_acts_read(void)
+t_intarr	*ft_acts_read(void)
 {
-	char *act;
-	t_intarr *acts;
+	char		*act;
+	t_intarr	*acts;
 
 	acts = ft_intarr_create();
-
 	if (!acts)
 		return (NULL);
-
 	act = ft_acts_readl();
-
 	while (act)
 	{
 		if (!ft_acts_check(act))
@@ -33,11 +30,9 @@ t_intarr *ft_acts_read(void)
 			ft_putendl_fd("Error", STDERR_FILENO);
 			exit(EXIT_FAILURE);
 		}
-
 		ft_acts_push(&acts, act);
 		free(act);
 		act = ft_acts_readl();
 	}
-
 	return (acts);
 }

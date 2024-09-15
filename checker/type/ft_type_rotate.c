@@ -12,16 +12,13 @@
 
 #include "../checker.h"
 
-t_action ft_type_rotate(char *act)
+t_action	ft_type_rotate(char *act)
 {
 	if (!ft_strncmp("ra\n", act, 3))
 		return (RA);
-
 	if (!ft_strncmp("rb\n", act, 3))
 		return (RB);
-
 	if (!ft_strncmp("rr\n", act, 3))
 		return (RR);
-
 	return (-1);
 }
