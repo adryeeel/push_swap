@@ -105,38 +105,20 @@ LIBCONVERT_OBJ = $(addprefix $(LIBCONVERT_DIR)/$(BUILD_DIR)/, $(LIBCONVERT_SRCS:
 
 # Integer array functions
 
-LIBINTARR_SRCS =	ft_intarr_pop.c				\
-									ft_intarr_map.c				\
-									ft_intarr_copy.c			\
-									ft_intarr_free.c			\
-									ft_intarr_join.c			\
-									ft_intarr_push.c			\
-									ft_intarr_sort.c			\
-									ft_intarr_swap.c			\
-									ft_intarr_shift.c			\
-									ft_intarr_create.c		\
-									ft_intarr_unshift.c		\
-									ft_intarr_insertat.c	\
+LIBINTARR_SRCS =	ft_intarr_free.c		\
+									ft_intarr_push.c		\
+									ft_intarr_create.c	\
 
 LIBINTARR_DIR = intarr
 LIBINTARR_OBJ = $(addprefix $(LIBINTARR_DIR)/$(BUILD_DIR)/, $(LIBINTARR_SRCS:.c=.o))
 
 # Strings array functions
 
-LIBSTRARR_SRCS =	ft_strarr_pop.c				\
-									ft_strarr_map.c				\
-									ft_strarr_copy.c			\
-									ft_strarr_free.c			\
-									ft_strarr_join.c			\
-									ft_strarr_push.c			\
-									ft_strarr_sort.c			\
-									ft_strarr_swap.c			\
-									ft_strarr_shift.c			\
-									ft_strarr_merge.c			\
-									ft_strarr_create.c		\
-									ft_strarr_length.c		\
-									ft_strarr_unshift.c		\
-									ft_strarr_insertat.c	\
+LIBSTRARR_SRCS =	ft_strarr_free.c		\
+									ft_strarr_push.c		\
+									ft_strarr_merge.c		\
+									ft_strarr_create.c	\
+									ft_strarr_length.c	\
 
 LIBSTRARR_DIR = strarr
 LIBSTRARR_OBJ = $(addprefix $(LIBSTRARR_DIR)/$(BUILD_DIR)/, $(LIBSTRARR_SRCS:.c=.o))
