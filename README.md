@@ -33,7 +33,9 @@ The project allows the use of two stacks to solve the sorting challenge: Stack A
 - `rrb`: Reverse rotate stack B (shift downwards).
 - `rrr`: Reverse rotate both stacks A and B.
 
-I implemented each `push_swap` operation in the `push_swap/acts/` directory. The functions were implemented thinking in reduce code identation for repeated operations, so, the functions itself handles the repetition in a `while` loop based on the value passed as argument to the called function.
+I implemented each `push_swap` operation in the `push_swap/acts/` directory, focusing on minimizing code indentation and redundancy for repeated operations. To achieve this, each function is designed to internally manage repetition using a `while` loop, which executes the operation a specified number of times based on the `n` argument.
+
+This approach keeps the code cleaner and more maintainable, while also reducing the need for repetitive code blocks in the sorting moudule, making the operations more efficient and easier to follow.
 
 ### Stack
 
