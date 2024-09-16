@@ -33,7 +33,48 @@ The project allows the use of two stacks to solve the sorting challenge: Stack A
 - `rrb`: Reverse rotate stack B (shift downwards).
 - `rrr`: Reverse rotate both stacks A and B.
 
-### The Arguments
+I implemented each `push_swap` operation in the `push_swap/acts/` directory. The functions were implemented thinking in reduce code identation for repeated operations, so, the functions itself handles the repetition in a `while` loop based on the value passed as argument to the called function.
+
+### Stack
+
+I developed a dedicated **stack handling module** for my application, which serves as the foundation for all stack manipulations, from creation to destruction. This module abstracts the complexity of stack operations and ensures efficient handling of the stack during the sorting process.
+
+#### Data Structure Design
+
+I began by creating the `t_stack` data structure, which is a `struct` that contains key members to optimize the sorting process:
+
+- **`min`**: The index of the minimum value in the stack.
+- **`max`**: The index of the maximum value in the stack.
+- **`data`**: An integer array that stores the values in the stack.
+- **`size`**: The current length of the stack (i.e., the number of elements).
+
+The **`data`** member is a simple integer array. During the planning phase, I considered using a singly linked list to store the stack's data, as linked lists are often more flexible for dynamic data. However, after careful consideration, I opted for an array-based approach because of its simplicity and faster access times, which are critical for the high-performance requirements of this project. Arrays provide constant-time access (`O(1)`) to elements by index, making operations like finding the minimum or maximum more efficient.
+
+The inclusion of the **`size`** member required careful implementation of size-tracking logic across all stack operations to ensure accurate updates whenever elements were added or removed. This tracking was essential for maintaining the integrity of the stack and was seamlessly integrated into the stack manipulation functions.
+
+This feature became crucial for my sorting algorithm, which relies heavily on index-to-size comparisons for determining the stack's current state and making efficient sorting decisions. The accurate tracking of stack size allowed the algorithm to perform operations like rotations and swaps based on the dynamic size of the stack, significantly improving both performance and correctness.
+
+#### Core Stack Operations
+
+Within this module, I implemented five core operations, corresponding to the basic manipulation functions needed for the stack instruction set:
+
+- **`ft_stack_pop()`**: Removes the top element from the stack. This function is crucial for implementing operations like `pa` and `pb` (push between stacks).
+
+- **`ft_stack_push()`**: Adds a new element to the top of the stack. This is used when transferring elements between Stack A and Stack B.
+
+- **`ft_stack_swap()`**: Swaps the top two elements of the stack. This operation is used in instructions like `sa`, `sb`, and `ss` (swap operations for both stacks).
+
+- **`ft_stack_rotate()`**: Rotates the stack upwards, moving the top element to the bottom. This is essential for implementing the `ra`, `rb`, and `rr` operations (rotation).
+
+- **`ft_stack_rrotate()`**: Reverse rotates the stack, moving the bottom element to the top. This is used in the `rra`, `rrb`, and `rrr` operations (reverse rotation).
+
+#### Integration with Instruction Set
+
+These core stack functions serve as the building blocks for the **[instruction set](#instructions-set)** that manipulates the stacks during sorting. In some cases, I combined multiple stack operations to implement more complex behaviors, such as rotating or swapping both stacks at once. By abstracting these operations into simple functions, the code remains clean, maintainable, and easy to extend with new features or optimizations.
+
+This module plays a key role in ensuring the efficiency and correctness of my sorting algorithm, as it directly impacts the performance of the stack manipulations that are at the heart of the project.
+
+### Arguments
 
 The stack to be sorted must be provided as arguments to the `push_swap` program, with the first argument representing the top of the stack.
 
@@ -65,7 +106,7 @@ I designed a dedicated argument validation module within my program architecture
 
 This modular approach not only keeps the argument validation process clean and isolated but also makes the code more maintainable for future improvements or additional checks.
 
-### The Algorithm
+### The Solver Algorithm
 
 ### Bonus
 
