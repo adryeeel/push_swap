@@ -50,11 +50,11 @@ I began by creating the `t_stack` data structure, which is a `struct` that conta
 - **`data`**: An integer array that stores the values in the stack.
 - **`size`**: The current length of the stack (i.e., the number of elements).
 
-The **`data`** member is a simple integer array. During the planning phase, I considered using a singly linked list to store the stack's data, as linked lists are often more flexible for dynamic data. However, after careful consideration, I opted for an array-based approach because of its simplicity and faster access times, which are critical for the high-performance requirements of this project. Arrays provide constant-time access (`O(1)`) to elements by index, making operations like finding the minimum or maximum more efficient.
+The **`data`** member is a simple integer array. During the planning phase, I considered using a singly linked list to store the stack's data, as linked lists are often more flexible for dynamic data. However, after discussing with some peers, I opted for an array-based approach because of its simplicity and faster access times, which are critical for the high-performance requirements of this project. Arrays provide constant-time access (`O(1)`) to elements by index, making operations like finding the minimum or maximum more efficient.
 
-The inclusion of the **`size`** member required careful implementation of size-tracking logic across all stack operations to ensure accurate updates whenever elements were added or removed. This tracking was essential for maintaining the integrity of the stack and was seamlessly integrated into the stack manipulation functions.
+The inclusion of the **`size`** member required implementation of size-tracking logic across all stack operations to ensure accurate updates whenever elements were added or removed. This tracking was essential for maintaining the integrity of the stack and was seamlessly integrated into the stack manipulation functions.
 
-This feature became crucial for my sorting algorithm, which relies heavily on index-to-size comparisons for determining the stack's current state and making efficient sorting decisions. The accurate tracking of stack size allowed the algorithm to perform operations like rotations and swaps based on the dynamic size of the stack, significantly improving both performance and correctness.
+This feature became crucial for my sorting algorithm, which relies heavily on index-to-size comparisons for determining the stack's current state and making efficient sorting decisions.
 
 #### Core Stack Operations
 
