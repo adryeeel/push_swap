@@ -209,13 +209,13 @@ This structure ensures that the `checker` program provides accurate feedback on 
 
 - `cd push_swap`
 
-### `push_swap`
+### Build `push_swap`
 
 - `make`
 
 - `./push_swap/push_swap [STACK]`
 
-### `checker`
+### Build `checker`
 
 - `make bonus`
 
