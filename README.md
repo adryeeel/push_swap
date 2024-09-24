@@ -203,11 +203,31 @@ After executing the movements, the program determines the outcome:
 
 This structure ensures that the `checker` program provides accurate feedback on the correctness of the `push_swap` operations, serving as a tool for validating sorting sequences.
 
-## Key Features
-
 ## Usage
 
+- `git clone https://github.com/adryeeel/push_swap.git`
+
+- `cd push_swap`
+
+### `push_swap`
+
+- `make`
+
+- `./push_swap/push_swap [STACK]`
+
+### `checker`
+
+- `make bonus`
+
+- `./checker/checker [STACK]`
+  
+- Input the [sort movements](#core-stack-operations)
+
+- Hit `CTRL+D` to finish the input
+
 ## Evaluation
+
+:construction: Waiting for evaluation.
 
 ## Feedback and Support
 
