@@ -124,7 +124,7 @@ The sorting process begins in the [`ft_stack_sort.c`](push_swap/stack/ft_stack_s
 
 When pushing an element, either from A to B or B to A, the key is to find the optimal element &ndash; the one that requires the fewest operations to be placed in the correct position in the other stack.
 
-To identify this optimal element, I developed the [ft_find_least_sa.c](push_swap/solve/find/ft_find_least_sa.c) and [ft_find_least_sb.c](push_swap/solve/find/ft_find_least_sb.c) functions. These functions utilize [ft_calc_total_ops.c](push_swap/solve/calc/ft_calc_total_ops.c) to calculate the total number of operations required for each element, based on its index in the stack.
+To identify this optimal element, I developed the [`ft_find_least_sa.c`](push_swap/solve/find/ft_find_least_sa.c) and [`ft_find_least_sb.c`](push_swap/solve/find/ft_find_least_sb.c) functions. These functions utilize [ft_calc_total_ops.c](push_swap/solve/calc/ft_calc_total_ops.c) to calculate the total number of operations required for each element, based on its index in the stack.
 
 By iterating over each stack and calculating the operation cost for every element, the function returns the index of the element with the minimal required operations. This helps ensure that each push is as efficient as possible.
 
