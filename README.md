@@ -225,6 +225,12 @@ This structure ensures that the `checker` program provides accurate feedback on 
 
 - Hit `CTRL+D` to finish the input
 
+## Testing
+
+I implemented some tests for the `push_swap`. It tests the arguments input and the sort output for various stacks sizes, from 1 to 500. This validation is done with the `checker_linux` provided by the 42 school.
+
+To run the tests, execute the `test.sh` script present in the `push_swap/tests` folder.
+
 ## Evaluation
 
 :construction: Waiting for evaluation.
