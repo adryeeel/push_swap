@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 20:11:58 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/09/15 22:08:10 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/09/24 06:05:42 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ typedef enum e_action
  * Main functions
  */
 
-void		ft_checker_process(t_strarr *input);
+bool		ft_checker_process(t_strarr *input);
 
 /**
  * Actions handling functions
