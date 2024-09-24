@@ -6,7 +6,7 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 17:19:33 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/09/10 00:10:26 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/09/24 06:00:03 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ t_action	ft_type_swap(char *act)
 		return (SB);
 	if (!ft_strncmp("ss\n", act, 3))
 		return (SS);
-	return (-1);
+	return (UNKNOWN);
 }
