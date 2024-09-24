@@ -221,7 +221,7 @@ This structure ensures that the `checker` program provides accurate feedback on 
 
 - `./checker/checker [STACK]`
   
-- Input the [sort movements](#core-stack-operations)
+- Input the [sort movements](#instructions-set)
 
 - Hit `CTRL+D` to finish the input
 
