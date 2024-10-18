@@ -6,15 +6,15 @@
 /*   By: arocha-b <arocha-b@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 19:57:08 by arocha-b          #+#    #+#             */
-/*   Updated: 2024/09/24 06:11:04 by arocha-b         ###   ########.fr       */
+/*   Updated: 2024/10/18 17:54:43 by arocha-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-int main(int argc, char const *argv[])
+int	main(int argc, char const *argv[])
 {
-	t_strarr *input;
+	t_strarr	*input;
 
 	if (argc-- < 2)
 		return (EXIT_FAILURE);
